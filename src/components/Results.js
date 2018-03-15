@@ -15,15 +15,15 @@ const renderTableRows = results =>
 
 const Results = props => (
   <div>
-    <table>
+    <table id="resultsTable">
       <thead>
         <tr>
-          <th>age1</th>
-          <th>contribution1</th>
-          <th>age2</th>
-          <th>contribution2</th>
-          <th>appreciation</th>
-          <th>balance</th>
+          <th>Age</th>
+          <th>Contribution</th>
+          <th>Age</th>
+          <th>Contribution</th>
+          <th>Appreciation</th>
+          <th>Balance</th>
         </tr>
       </thead>
       <tbody>{renderTableRows(props.data)}</tbody>

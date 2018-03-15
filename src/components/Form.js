@@ -38,22 +38,25 @@ class Form extends React.Component {
   render = () => (
     <div>
       <div>
-        Age1{' '}
+        Age1
         <input
+          className="numberInput"
           name="age1"
           type="text"
           onChange={this.onChange}
           value={this.state.age1}
         />
-        Retirement Age{' '}
+        Retirement Age
         <input
+          className="numberInput"
           name="retirementAge1"
           type="text"
           onChange={this.onChange}
           value={this.state.retirementAge1}
         />
-        Yearly Contribution{' '}
+        Yearly Contribution
         <input
+          className="numberInput"
           name="contribution1"
           type="text"
           onChange={this.onChange}
@@ -61,22 +64,25 @@ class Form extends React.Component {
         />
       </div>
       <div>
-        Age2{' '}
+        Age2
         <input
+          className="numberInput"
           name="age2"
           type="text"
           onChange={this.onChange}
           value={this.state.age2}
         />
-        Retirement Age{' '}
+        Retirement Age
         <input
+          className="numberInput"
           name="retirementAge2"
           type="text"
           onChange={this.onChange}
           value={this.state.retirementAge2}
         />
-        Yearly Contribution{' '}
+        Yearly Contribution
         <input
+          className="numberInput"
           name="contribution2"
           type="text"
           onChange={this.onChange}
@@ -84,15 +90,17 @@ class Form extends React.Component {
         />
       </div>
       <div>
-        Savings{' '}
+        Savings
         <input
+          className="numberInput"
           name="savings"
           type="text"
           onChange={this.onChange}
           value={this.state.savings}
         />
-        Investment Return %{' '}
+        Investment Return %
         <input
+          className="numberInput"
           name="returnRate"
           type="text"
           onChange={this.onChange}
