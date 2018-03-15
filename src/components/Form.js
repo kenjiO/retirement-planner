@@ -5,11 +5,14 @@ class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      age: '60',
-      retirementAge: '65',
-      savings: '50000',
-      contribution: '5000',
-      returnRate: '0.1'
+      age1: '60',
+      retirementAge1: '65',
+      contribution1: '6000',
+      age2: '50',
+      retirementAge2: '65',
+      contribution2: '4000',
+      savings: '100000',
+      returnRate: '10'
     };
   }
 
@@ -20,52 +23,82 @@ class Form extends React.Component {
 
   updateResults = () => {
     const fields = {
-      age: parseInt(this.state.age, 10),
-      retirementAge: parseInt(this.state.retirementAge, 10),
+      age1: parseInt(this.state.age1, 10),
+      age2: parseInt(this.state.age2, 10),
+      retirementAge1: parseInt(this.state.retirementAge1, 10),
+      retirementAge2: parseInt(this.state.retirementAge2, 10),
+      contribution1: parseInt(this.state.contribution1, 10),
+      contribution2: parseInt(this.state.contribution2, 10),
       savings: parseInt(this.state.savings, 10),
-      contribution: parseInt(this.state.contribution, 10),
-      returnRate: parseFloat(this.state.returnRate, 10)
+      returnRate: parseFloat(this.state.returnRate, 10) / 100
     };
     this.props.updateResults(fields);
   };
 
   render = () => (
     <div>
-      Age{' '}
-      <input
-        name="age"
-        type="text"
-        onChange={this.onChange}
-        value={this.state.age}
-      />
-      Retirement Age{' '}
-      <input
-        name="retirementAge"
-        type="text"
-        onChange={this.onChange}
-        value={this.state.retirementAge}
-      />
-      Savings{' '}
-      <input
-        name="savings"
-        type="text"
-        onChange={this.onChange}
-        value={this.state.savings}
-      />
-      Yearly Contribution{' '}
-      <input
-        name="contribution"
-        type="text"
-        onChange={this.onChange}
-        value={this.state.contribution}
-      />
-      Investment Return{' '}
-      <input
-        name="returnRate"
-        type="text"
-        onChange={this.onChange}
-        value={this.state.returnRate}
-      />
+      <div>
+        Age1{' '}
+        <input
+          name="age1"
+          type="text"
+          onChange={this.onChange}
+          value={this.state.age1}
+        />
+        Retirement Age{' '}
+        <input
+          name="retirementAge1"
+          type="text"
+          onChange={this.onChange}
+          value={this.state.retirementAge1}
+        />
+        Yearly Contribution{' '}
+        <input
+          name="contribution1"
+          type="text"
+          onChange={this.onChange}
+          value={this.state.contribution1}
+        />
+      </div>
+      <div>
+        Age2{' '}
+        <input
+          name="age2"
+          type="text"
+          onChange={this.onChange}
+          value={this.state.age2}
+        />
+        Retirement Age{' '}
+        <input
+          name="retirementAge2"
+          type="text"
+          onChange={this.onChange}
+          value={this.state.retirementAge2}
+        />
+        Yearly Contribution{' '}
+        <input
+          name="contribution2"
+          type="text"
+          onChange={this.onChange}
+          value={this.state.contribution2}
+        />
+      </div>
+      <div>
+        Savings{' '}
+        <input
+          name="savings"
+          type="text"
+          onChange={this.onChange}
+          value={this.state.savings}
+        />
+        Investment Return %{' '}
+        <input
+          name="returnRate"
+          type="text"
+          onChange={this.onChange}
+          value={this.state.returnRate}
+        />
+      </div>
     </div>
   );
 }
