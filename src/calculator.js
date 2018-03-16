@@ -2,6 +2,7 @@ import _ from 'lodash';
 const LIFE_EXPECTANCY = 100;
 
 const calculateNextYear = (previousYear, parameters) => {
+  const year = (previousYear.year || 0) + 1;
   const age1 = previousYear.age1 + 1;
   const age2 = previousYear.age2 + 1;
   const contribution1 =
@@ -12,6 +13,7 @@ const calculateNextYear = (previousYear, parameters) => {
   const appreciation = _.round(previousYear.balance * parameters.returnRate);
 
   const currentYear = {
+    year,
     age1,
     age2,
     contribution1,

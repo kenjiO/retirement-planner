@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const renderTableRows = results =>
   results.map((yearData, index) => (
     <tr key={index}>
+      <td>{yearData.year}</td>
       <td>{yearData.age1}</td>
       <td>{yearData.contribution1}</td>
       <td>{yearData.age2}</td>
@@ -18,6 +19,7 @@ const Results = props => (
     <table id="resultsTable">
       <thead>
         <tr>
+          <th>Year</th>
           <th>Age</th>
           <th>Contribution</th>
           <th>Age</th>
